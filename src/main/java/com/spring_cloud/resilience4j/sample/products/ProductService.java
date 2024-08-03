@@ -1,13 +1,13 @@
 package com.spring_cloud.resilience4j.sample.products;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
 
 import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
@@ -31,11 +31,13 @@ public class ProductService {
         log.info("###Fetching product details for productId: {}", productId);
         if ("111".equals(productId)) {
             log.warn("###Received empty body for productId: {}", productId);
-            throw new RuntimeException("Empty response body");  //productId 가 111 이면 에러 발생시킴
+            throw new RuntimeException("Empty response body");
         }
-        return new Product(productId, "Sample Product: " + productId);
+        return new Product(
+                productId,
+                "Sample Product"
+        );
     }
-
 
     public Product fallbackGetProductDetails(String productId, Throwable t) {
         log.error("####Fallback triggered for productId: {} due to: {}", productId, t.getMessage());
@@ -69,7 +71,6 @@ public class ProductService {
     // | (오픈 상태 시) 호출 차단                      | 서킷 브레이커가 오픈 상태일 때 호출이 차단됨         | #######CircuitBreaker Call Not Permitted: ...                   |
     // | (오픈 상태 시) 폴백 메서드 호출                 | 메서드 호출이 차단될 경우 폴백 메서드 호출          | ####Fallback triggered for productId: ... due to: ...           |
     // +------------------------------------------+-------------------------------------------+-----------------------------------------------------------------+
-
 
 
 }

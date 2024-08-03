@@ -8,7 +8,8 @@
     <img width="419" alt="image" src="https://github.com/user-attachments/assets/b90c1c5a-1281-4ca6-a076-8b29fa3d54c1">
 
 2. actuator/prometheus 로그 조회
-![image](https://github.com/user-attachments/assets/f51ceb15-2dc7-4466-a334-f5a9da73660e)
+<img width="873" alt="image" src="https://github.com/user-attachments/assets/6af9f260-4dec-4b8d-b47a-384518c2b3b1">
+
  ( "closed" ~ "half_open" ~ "open" )
 
 ---

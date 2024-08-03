@@ -31,13 +31,11 @@ public class ProductService {
         log.info("###Fetching product details for productId: {}", productId);
         if ("111".equals(productId)) {
             log.warn("###Received empty body for productId: {}", productId);
-            throw new RuntimeException("Empty response body");
+            throw new RuntimeException("Empty response body");  //productId 가 111 이면 에러 발생시킴
         }
-        return new Product(
-                productId,
-                "Sample Product"
-        );
+        return new Product(productId, "Sample Product: " + productId);
     }
+
 
     public Product fallbackGetProductDetails(String productId, Throwable t) {
         log.error("####Fallback triggered for productId: {} due to: {}", productId, t.getMessage());

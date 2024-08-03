@@ -4,8 +4,8 @@
 #### 💡 상품을 조회하는 프로젝트를 가정합니다.
 1. 상품 아이디 111을 호출하면 에러를 발생시켜 `fallbackMethod`를 실행하는 것을 확인합니다.
    (fallbackMethod 실행된 뒤 일정시간 이후 다시 fallbackMethod가 해제되는 것을 볼 수 있습니다.) 
+<img width="367" alt="image" src="https://github.com/user-attachments/assets/6610462a-e8c4-482d-ae73-9b1351a30717">
 
-    <img width="419" alt="image" src="https://github.com/user-attachments/assets/b90c1c5a-1281-4ca6-a076-8b29fa3d54c1">
 
 2. actuator/prometheus 로그 조회
 <img width="873" alt="image" src="https://github.com/user-attachments/assets/6af9f260-4dec-4b8d-b47a-384518c2b3b1">

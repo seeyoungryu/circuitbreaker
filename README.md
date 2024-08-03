@@ -1,11 +1,17 @@
-# 서킷 브레이커 구현 레파지토리 
 
-<aside>
-💡 상품을 조회하는 프로젝트를 가정하겠습니다. 
-상품 아이디 111을 호출하면 에러를 발생시켜 `fallbackMethod` 를 실행하는것을 확인합니다.
-또한 이벤트리스너를 사용하여 서킷브레이커의 상태를 조회합니다.
+# 서킷 브레이커 구현 레파지토리
 
-</aside>
+#### 💡 상품을 조회하는 프로젝트를 가정합니다.
+1. 상품 아이디 111을 호출하면 에러를 발생시켜 `fallbackMethod`를 실행하는 것을 확인합니다.
+   (fallbackMethod 실행된 뒤 일정시간 이후 다시 failbackMethod가 해제되는 것을 볼 수 있습니다.) 
+
+    <img width="419" alt="image" src="https://github.com/user-attachments/assets/b90c1c5a-1281-4ca6-a076-8b29fa3d54c1">
+
+2. actuator/prometheus 로그 조회
+![image](https://github.com/user-attachments/assets/f51ceb15-2dc7-4466-a334-f5a9da73660e)
+ ( "closed" ~ "half_open" ~ "open" )
+
+---
 
 ## 1. 서킷 브레이커 (Resilience4j)
 

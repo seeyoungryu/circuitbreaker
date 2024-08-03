@@ -7,7 +7,9 @@
 
     <img width="419" alt="image" src="https://github.com/user-attachments/assets/b90c1c5a-1281-4ca6-a076-8b29fa3d54c1">
 
-3. 이벤트리스너를 사용하여 서킷브레이커의 상태를 조회합니다.
+2. actuator/prometheus 로그 조회
+![image](https://github.com/user-attachments/assets/f51ceb15-2dc7-4466-a334-f5a9da73660e)
+ ( "closed" ~ "half_open" ~ "open" )
 
 ---
 

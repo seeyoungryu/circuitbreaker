@@ -10,7 +10,7 @@
 2. actuator/prometheus 로그 조회
 <img width="873" alt="image" src="https://github.com/user-attachments/assets/6af9f260-4dec-4b8d-b47a-384518c2b3b1">
 
- ( "closed" ~ "half_open" ~ "open" )
+
 
 ---
 
